@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9: DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .ChangeBgColor {
+            background-color: #e0f7fa;
+            padding: 10px;
+            margin: 20px 0;
+            border: 1px solid #00796b;
+            border-radius: 5px;
+            text-align: center;
+        }
+        ul {
+            background-color: #ffffff;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            list-style-type: none;
+            margin: 20px 0;
+        }
+        ul li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        ul li:last-child {
+            border-bottom: none;
+        }
+        .Task5, .Task6 {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #00796b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .Task5:hover, .Task6:hover {
+            background-color: #004d40;
+        }
+        .RmTask6, .RmTask5{
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #ffccbc;
+            border: 1px solid #ff5722;
+            border-radius: 5px;
+        }
+        #myImage {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            border: 2px solid #00796b;
+            border-radius: 5px;
+        }
+        #textParagraph {
+            padding: 10px;
+            margin: 20px 0;
+            background-color: #fff9c4;
+            border: 1px solid #fbc02d;
+            border-radius: 5px;
+        }
+        #changeTextButton {
+            display: inline-block;
+            margin: 10px 0;
+            padding: 10px 20px;
+            background-color: #0288d1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #changeTextButton:hover {
+            background-color: #01579b;
+        }
+        .hoverElement {
+            padding: 20px;
+            margin: 20px 0;
+            background-color: #e8f5e9;
+            border: 2px solid #388e3c;
+            border-radius: 5px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+        .hoverElement:hover {
+            border-color: #1b5e20;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="ChangeContext" class="ChangeBgColor">Original Text</h1>
+    
+    <ul id="myList">
+        <li>List item 1</li>
+        <li>List item 2</li>
+    </ul>
+    
+    <div>
+        <button id="removeTask5Button" class="Task5">Remove Task 5 Element</button>
+        <div class="RmTask5">Task 5</div>
+    </div>
+    
+    <div class="T6">
+        <button id="removeTask6Button" class="Task6">Remove Last Child</button>
+        <div class="RmTask6">Last Element</div>
+    </div>
+    
+    <a id="myLink" href="https://www.example.com">Visit Example</a>
+    
+    <div>
+        <p id="textParagraph">This is a paragraph.</p>
+        <button id="changeTextButton">Change Text</button>
+    </div>
+    
+    <div class="hoverElement">Hover over this element</div>
+    
+    <script src="./Day9.js"></script>
+</body>
+</html>
